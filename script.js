@@ -11,7 +11,7 @@ if (saved) {
     const li = document.createElement('li');
     li.textContent = tasksArray[i]
     const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = '❌';
+    deleteBtn.textContent = "X";
     deleteBtn.addEventListener('click', function (event) {
       li.remove();
       tasksArray.splice(i, 1)
@@ -34,16 +34,16 @@ addButton.addEventListener('click', function () {
     const li = document.createElement('li');
     li.textContent = task;
     const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = '❌';
+    deleteBtn.textContent = "X";
     deleteBtn.addEventListener('click', function (event) {
       li.remove();
     });
     li.appendChild(deleteBtn);
-
     list.appendChild(li);
     text.value = "";
     tasksArray.push(task);
     localStorage.setItem('tasks', JSON.stringify(tasksArray));
   }
+  s
 });
 
