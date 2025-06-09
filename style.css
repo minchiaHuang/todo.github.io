@@ -21,13 +21,14 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 40px auto;
-  padding: 48px 24px;
+  padding: 32px;
   border: 2px solid rgb(255 255 255 / 18%);
   border-radius: 24px;
   max-width: 900px;
   background: rgb(255 255 255 / 10%);
   box-shadow: 0 4px 32px rgb(0 0 0 / 10%);
   backdrop-filter: blur(20px);
+  ;
 }
 
 h1 {
@@ -41,18 +42,23 @@ h1 {
   flex-direction: row;
   align-items: center;
   width: 100%;
-  gap: 20px;
+  gap: 1rem;
   margin-bottom: 32px;
 }
 
-.input-row input[type="text"] {
+.input-container {
   display: flex;
-  padding: 18px 16px;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.input-row input[type="text"] {
+  padding: 1rem 1.25rem;
   border: 2px solid lightgray;
   border-radius: 16px;
   background: rgb(255 255 255 / 13%);
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.2s;
@@ -63,9 +69,9 @@ h1 {
   border: 2px solid #a084ee;
 }
 
-#addTask {
+#add-task {
   margin: 10px;
-  padding: 18px 36px;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 16px;
   background: #6366f1;
@@ -78,7 +84,7 @@ h1 {
   white-space: nowrap;
 }
 
-#addTask:hover {
+#add-task:hover {
   background: #4338ca;
 }
 
@@ -93,24 +99,37 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px;
-  padding: 32px 40px;
-  border-radius: 8px;
+  padding: 1.25rem;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 16px;
   background: rgb(255 255 255 / 10%);
-  border-color: rgb(255 255 255 / 20%);
-  margin-bottom: 12px;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+li:hover {
+  box-shadow: 0 8px 25px rgb(0 0 0 / 15%);
+  transform: translateY(-1px);
 }
 
 .delete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  background: #e74c3c;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  background: #f44336;
   color: #fff;
-  font-size: 18px;
+  font-size: 1.2rem;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #dc2826;
+  transform: scale(1.1);
 }
 
 .completed {
