@@ -1,4 +1,3 @@
-
 const text = document.querySelector('input');
 const addButton = document.getElementById('addTask');
 const list = document.querySelector('ul');
@@ -9,14 +8,22 @@ if (saved) {
   tasksArray = JSON.parse(saved);
   for (let i = 0; i < tasksArray.length; i++) {
     const li = document.createElement('li');
-    li.textContent = tasksArray[i]
+    
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = "X";
-    deleteBtn.addEventListener('click', function (event) {
+
+    const task = tasksArray[i];
+    li.textContent = task;
+
+    deleteBtn.addEventListener('click', function () {
       li.remove();
-      tasksArray.splice(i, 1)
-      localStorage.setItem('tasks', JSON.stringify(tasksArray));
+      let index = tasksArray.indexOf(task)
+      if (index > -1) {
+        tasksArray.splice(index, 1);
+        localStorage.setItem('tasks', JSON.stringify(tasksArray));
+      }
     });
+
     li.appendChild(deleteBtn);
     list.appendChild(li);
   }

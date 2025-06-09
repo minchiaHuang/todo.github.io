@@ -48,7 +48,7 @@ h1 {
 .input-row input[type="text"] {
   display: flex;
   padding: 18px 16px;
-  border: 2px lightgray;
+  border: 2px solid lightgray;
   border-radius: 16px;
   background: rgb(255 255 255 / 13%);
   color: #fff;
